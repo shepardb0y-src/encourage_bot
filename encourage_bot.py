@@ -16,5 +16,5 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 client = MyClient(intents=intents)
-client.run(
-    'MTA3MDAzNTAyNDUyMDQyOTYyOA.Gn76G3.vB9MAGQCrjh4aFoqxXk2JCUymxkrs3e6xflZmw')
+token = 'MTA3MDAzNTAyNDUyMDQyOTYyOA.Gn76G3.vB9MAGQCrjh4aFoqxXk2JCUymxkrs3e6xflZmw'
+client.run(token)
