@@ -1,8 +1,12 @@
-# first commit
 # This example requires the 'message_content' intent.
 
 import discord
-import os
+
+import os 
+from dotenv import load_dotenv
+load_dotenv()
+
+tokens = os.getenv('toke')
 
 
 class MyClient(discord.Client):
@@ -12,10 +16,12 @@ class MyClient(discord.Client):
     async def on_message(self, message):
         print(f'Message from {message.author}: {message.content}')
 
-
 intents = discord.Intents.default()
 intents.message_content = True
 
 client = MyClient(intents=intents)
+client.run(tokens)
 
-client.run(os.getenv('token'))
+
+
+
