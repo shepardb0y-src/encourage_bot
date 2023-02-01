@@ -2,6 +2,7 @@
 # This example requires the 'message_content' intent.
 
 import discord
+import os
 
 
 class MyClient(discord.Client):
@@ -16,5 +17,5 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 client = MyClient(intents=intents)
-token = 'MTA3MDAzNTAyNDUyMDQyOTYyOA.Gn76G3.vB9MAGQCrjh4aFoqxXk2JCUymxkrs3e6xflZmw'
-client.run(token)
+
+client.run(os.getenv('token'))
